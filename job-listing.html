@@ -357,7 +357,7 @@
             userSelectedSkills.forEach(skill => {
                 const tag = document.createElement('span');
                 tag.className = 'skill-tag';
-                tag.innerHTML = ${skill}<span class="remove-skill" data-skill="${skill}"><i class="fas fa-times"></i></span>;
+                tag.innerHTML = `${skill}<span class="remove-skill" data-skill="${skill}"><i class="fas fa-times"></i></span>`;
                 container.appendChild(tag);
             });
             
@@ -443,7 +443,7 @@
             
             jobsToShow.forEach(job => {
                 const jobCard = document.createElement('div');
-                jobCard.className = job-card ${job.matchPercentage > 50 ? 'matched' : ''};
+                jobCard.className = `job-card ${job.matchPercentage > 50 ? 'matched' : ''}`;
                 
                 jobCard.innerHTML = `
                     <div class="match-percentage" style="background-color: ${getPercentageColor(job.matchPercentage)}">${job.matchPercentage}% Match</div>
@@ -460,7 +460,7 @@
                         <div class="skills-list">
                             ${job.skills.map(skill => {
                                 const isMatched = job.matchingSkills.includes(skill);
-                                return <span class="skill" style="${isMatched ? 'background: #c8e6c9; color: #2e7d32;' : ''}">${skill}</span>;
+                                return `<span class="skill" style="${isMatched ? 'background: #c8e6c9; color: #2e7d32;' : ''}">${skill}</span>`;
                             }).join('')}
                         </div>
                     </div>
