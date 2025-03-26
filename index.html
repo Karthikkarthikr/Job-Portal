@@ -371,7 +371,7 @@
             foundSkills.forEach(skill => {
                 highlightedText = highlightedText.replace(
                     new RegExp(skill.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
-                    <span class="skill-highlight">$&</span>
+                   '<span class="skill-highlight">$&</span>`
                 );
             });
             
